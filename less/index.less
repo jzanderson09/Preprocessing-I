@@ -53,7 +53,34 @@ table {
     box-sizing: border-box;
 }
 
+@background-color: rgb(179, 179, 179);
+@font-style: Arial;
+@link-color: black;
+@hover-color: rgb(173, 226, 148);
+@clicked-link: rgb(19, 107, 158);
+@link-padding: 0 2%;
+@border-padding: 4% 5%;
+
+
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	background: @background-color;
+	font-family: @font-style;
 }
 
+.navigate {
+	display: flex;
+	justify-content: flex-end;
+	padding: @border-padding;
+}
+
+.links {
+	color: @link-color;
+	font-size: 2.0rem;
+	text-decoration: none;
+	&:hover {text-decoration: underline;
+	color: @hover-color;}
+	&:active {color: @clicked-link;}
+	padding: @link-padding;
+}
