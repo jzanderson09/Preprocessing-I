@@ -175,18 +175,25 @@ body {
 .resume .banner h3 {
   font-size: 2.4rem;
 }
+.resume .banner .github-link {
+  margin: 1%;
+  border-radius: 5%;
+}
 .resume .skills {
   border: 1px solid purple;
   padding: 50px;
+  /*Added color to show division between elements.*/
   background: red;
 }
 .resume .work-history {
   border: 1px solid gold;
   padding: 50px;
+  /*Added color to show division between elements.*/
   background: crimson;
 }
 .resume .contact {
   border: 1px solid green;
   padding: 50px;
+  /*Added color to show division between elements.*/
   background: brown;
 }

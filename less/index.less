@@ -61,6 +61,7 @@ table {
 @link-padding: 0 2%;
 @border-padding: 2% 4%;
 @text-padding: 2% 0;
+@rounded-edges: 5%;
 
 
 html, body {
@@ -97,7 +98,7 @@ html, body {
 		.headshot {
 			width: 40%;
 			height: auto;
-			border-radius: 5%;
+			border-radius: @rounded-edges;
 		}
 
 		h1 {
@@ -107,24 +108,32 @@ html, body {
 
 		h3 {
 			font-size: 2.4rem;
-		}		
+		}	
+		
+		.github-link {
+			margin: 1%;
+			border-radius: @rounded-edges;
+		}
 	}
 
 	.skills {
 		border: 1px solid purple;
 		padding: 50px;
+		/*Added color to show division between elements.*/
 		background: red;
 	}
 
 	.work-history {
 		border: 1px solid gold;
 		padding: 50px;
+		/*Added color to show division between elements.*/
 		background: crimson;
 	}
 
 	.contact {
 		border: 1px solid green;
 		padding: 50px;
+		/*Added color to show division between elements.*/
 		background: brown;
 	}
 }
