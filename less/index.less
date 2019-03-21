@@ -183,9 +183,7 @@ html, body {
 		width: 100%;
 
 		@media (max-width: @phone) {
-			h1 {
-				margin-left: 20%;
-			}
+			margin-left: 20%;
 		}
 
 		.web-dev {
@@ -197,14 +195,33 @@ html, body {
 		padding: 5% 4% 4%;
 		width: 45%;
 
-			h2 {
-				font-size: @h2-text-size;
-				padding: @text-padding;
-			}
+		@media(max-width: @phone) {
+			display: flex;
+			flex-flow: row wrap;
+			margin: 5% 0;
+			padding: 0;
+			width: 100%;
+		}
 
-			p {
-				font-size: 1.6rem;
+		h2 {
+			font-size: @h2-text-size;
+			padding: @text-padding;
+
+			@media(max-width: @phone) {
+				font-size: 2.5rem;
+				width: 45%;
+				margin-left: 2%;
 			}
+		}
+
+		p {
+			font-size: 1.6rem;
+
+			@media(max-width: @phone) {
+				font-size: 1.5rem;
+				width: 45%;
+			}
+		}
 	}
 
 	.skills {
