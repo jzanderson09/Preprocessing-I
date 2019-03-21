@@ -176,8 +176,13 @@ body h3 {
   flex-flow: row wrap;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .resume {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .resume .name-and-info {
-  border: 1px solid purple;
   padding: 5% 4% 2%;
   width: 100%;
   display: flex;
@@ -189,11 +194,23 @@ body h3 {
   border-radius: 5%;
   margin-right: 4%;
 }
+@media (max-width: 500px) {
+  .resume .name-and-info .headshot {
+    width: 70%;
+    height: 35%;
+    margin-left: 15%;
+  }
+}
 .resume .name-and-info .contact {
   display: inline-block;
   padding: 5% 4% 3% 13%;
   font-size: 2rem;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .resume .name-and-info .contact {
+    font-size: 1.4rem;
+  }
 }
 .resume .name-and-info .contact h3 {
   font-weight: bold;
@@ -205,6 +222,11 @@ body h3 {
 .resume .name-and-work {
   display: block;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .resume .name-and-work h1 {
+    margin-left: 20%;
+  }
 }
 .resume .name-and-work .web-dev {
   margin: 2% 0;
