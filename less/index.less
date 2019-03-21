@@ -53,6 +53,8 @@ table {
     box-sizing: border-box;
 }
 
+/*---------------.less variables-----------------*/
+
 @background-color: rgb(179, 179, 179);
 @font-style: 'Roboto', sans-serif;
 @link-color: black;
@@ -62,18 +64,46 @@ table {
 @border-padding: 2% 4%;
 @text-padding: 2% 0;
 @rounded-edges: 5%;
+@h1-text-size: 4.8rem;
+@h2-text-size: 3.6rem;
+@h3-text-size: 2.4rem;
+@content-padding: 5% 4% 2%;
 
+/*----------------------------------------------*/
+
+/*-------------------Mix-ins--------------------*/
+
+.nav-flex() {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.flex-work() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*----------------------------------------------*/
 
 html, body {
 	height: 100%;
 	font-size: 62.5%;
 	background: @background-color;
 	font-family: @font-style;
+
+	h1 {
+		font-size: @h1-text-size;
+		padding: @text-padding;
+	}
+
+	h3 {
+		font-size: @h3-text-size;
+	}
 }
 
 .navigate {
-	display: flex;
-	justify-content: flex-end;
+	.nav-flex();
 	padding: @border-padding;
 	background: whitesmoke;
 	border: 25px solid @background-color;
@@ -91,49 +121,114 @@ html, body {
 
 .resume {
 	border: 50px solid whitesmoke;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 
-	.banner {
-		padding: 100px;
+
+
+	.name-and-info {
+		border: 1px solid purple;
+		padding: @content-padding;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
 
 		.headshot {
-			width: 40%;
-			height: auto;
+			width: 35%;
+    		height: 70%;
 			border-radius: @rounded-edges;
+			margin-right: 4%;
 		}
 
-		h1 {
-			font-size: 4.8rem;
-			padding: @text-padding;
-		}
+		.contact {
+			display: inline-block;
+			padding: 5% 4% 3% 13%;
+			font-size: 2.0rem;
+			margin-left: 4%;
 
-		h3 {
-			font-size: 2.4rem;
-		}	
-		
-		.github-link {
-			margin: 1%;
-			border-radius: @rounded-edges;
+			h3 {
+				font-weight: bold;
+				padding-bottom: 5%;
+			}
+
+			ul li {
+				padding-bottom: 2%;
+			}
 		}
+	}
+
+	.name-and-work {
+		display: block;
+		width: 100%;
+
+		.web-dev {
+			margin: 2% 0;
+		}
+	}
+
+	.intro {
+		padding: 5% 4% 4%;
+		width: 45%;
+
+			h2 {
+				font-size: @h2-text-size;
+				padding: @text-padding;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
 	}
 
 	.skills {
-		border: 1px solid purple;
-		padding: 50px;
-		/*Added color to show division between elements.*/
-		background: red;
+		padding: @content-padding;
+		width: 45%;
+
+		table {
+			width: 80%;
+			height: 90%;
+
+			th {
+				font-size: 2.4rem;
+				font-weight: bold;
+				width: 100%;
+			}
+
+			tr {
+				font-size: 2.4rem;
+			}
+		}	
 	}
 
 	.work-history {
-		border: 1px solid gold;
-		padding: 50px;
-		/*Added color to show division between elements.*/
-		background: crimson;
-	}
+		padding: @content-padding;
+		width: 100%;
+		.flex-work();
 
-	.contact {
-		border: 1px solid green;
-		padding: 50px;
-		/*Added color to show division between elements.*/
-		background: brown;
+		h3 {
+			font-size: @h3-text-size;
+			font-weight: bold;
+			padding-bottom: 2%;
+		}
+
+		table {
+			border: 2px outset black;
+			width: 80%;
+			text-align: left;
+			background: linear-gradient(to bottom right, teal, white);
+
+			.header {
+				border-bottom: 2px solid black;
+			}
+
+			.work-info {
+				font-size: 1.6rem;
+
+				td {
+					padding: 2%;
+				}
+			}
+		}
 	}
 }

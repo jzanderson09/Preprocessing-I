@@ -25,22 +25,29 @@
 
   <main class="resume">
 
-    <section class="banner">
+    <section class="name-and-info">
 
       <img src="img/profile.jpg" alt="resume headshot photo" class="headshot">
 
-      <h1>Brian T. Clayson - Web Dev</h1>
-      <h3>-Designing is my niche.</h3>
+      <address class="contact">
+        <h3>Contact:</h3>
+        <ul>
+          <li>Phone: 555-712-4372</li>
+          <li>Email: claysonrocksdevworld@gmail.com</li>
+          <li>Address: 121 W 81st St Apt 5A, Burbank, CA 91503</li>
+        </ul>
+      </address>
 
-      <a href="https://github.com/jzanderson09" target="_blank">
-        <button class="github-link">Check out my work!</button>
-      </a>
+      <div class="name-and-work">
+          <h1>Brian T. Clayson</h1>
+          <h3>- Web Dev</h3>
+      </div>
 
     </section>
 
     <section class="intro">
 
-      <h3>What I Bring To The Table:</h3>
+      <h2>What I Bring To The Table:</h2>
       
         <p>Maecenas tincidunt semper tortor, at efficitur urna elementum in.
           In hac habitasse platea dictumst.  Curabitur ornare dolor eu sem
@@ -55,10 +62,27 @@
 
     </section>
 
+    <!-- Right side of intro -->
     <section class="skills">
     
-      <h3>Proficiency:</h3>
-      <table></table><!--Maybe consider using progress meters alongside. -->
+      <h3></h3>
+      <table>
+          <tr>
+            <th>Proficiency:</th>
+          </tr>
+          <tr>
+            <td>HTML:</td>
+            <td><progress value="80" max="100"></progress></td>
+          </tr>
+          <tr>
+            <td>CSS:</td>
+            <td><progress value="70" max="100"></progress></td>
+          </tr>
+          <tr>
+            <td>Javascript:</td>
+            <td><progress value="60" max="100"></progress></td>
+          </tr>
+      </table><!--Maybe consider using progress meters alongside. -->
 
     </section>
 
@@ -66,13 +90,46 @@
 
       <h3>Work History:</h3>
 
-      <table></table>
+      <table>
+        
+        <tr class="work-info header">
+          <th>Yrs:</th>
+          <th>Company:</th>
+          <th>Title:</th>
+          <th>Tech Used:</th>
+        </tr>
+
+        <tr class="work-info">
+          <td>1</td>
+          <td>Google</td>
+          <td>Software Engineer</td>
+          <td>Python, SQL</td>
+        </tr>
+
+        <tr class="work-info">
+          <td>2</td>
+          <td>Microsoft</td>
+          <td>Back-End Developer</td>
+          <td>Javascript</td>
+        </tr>
+
+        <tr class="work-info">
+          <td>5</td>
+          <td>Amazon</td>
+          <td>Web Designer</td>
+          <td>HTML, CSS, Javascript</td>
+        </tr>
+
+        <tr class="work-info">
+          <td>2</td>
+          <td>Spotify</td>
+          <td>Developer</td>
+          <td>HTML, CSS</td>
+        </tr>
+
+      </table>
 
     </section>
-
-    <address class="contact">
-
-    </address>
 
   </main>
 
