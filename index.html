@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
-
+  <title>Brian T. Clayson's Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +15,124 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+
+  <nav class="navigate">
+    <a class="links" href="#">Home</a>
+    <a class="links" href="#">About</a>
+    <a class="links" href="#">Portfolio</a>
+    <a class="links" href="#">Contact</a>
+  </nav>
+
+  <main class="resume">
+
+    <section class="name-and-info">
+
+      <img src="img/profile.jpg" alt="resume headshot photo" class="headshot">
+
+      <address class="contact">
+        <h3>Contact:</h3>
+        <ul>
+          <li>Phone: 555-712-4372</li>
+          <li>Email: claysonrocksdevworld@gmail.com</li>
+          <li>Address: 121 W 81st St Apt 5A, Burbank, CA 91503</li>
+        </ul>
+      </address>
+
+      <div class="name-and-work">
+          <h1>Brian T. Clayson</h1>
+          <h3>- Web Dev</h3>
+      </div>
+
+    </section>
+
+    <section class="intro">
+
+      <h2>What I Bring To The Table:</h2>
+      
+      <p>Maecenas tincidunt semper tortor, at efficitur urna elementum in.
+        In hac habitasse platea dictumst.  Curabitur ornare dolor eu sem
+        interdum posuere. Etiam vehicula sem ut nisi vulputate, eu feugiat
+        diam facilisis. Class aptent taciti sociosqu ad litora torquent per
+        conubia nostra, per inceptos himenaeos. Sed nec tempor nisl.
+        Suspendisse et tristique ligula, non commodo ex. Praesent a 
+        vulputate nibh. Nulla Ligula diam, molestie sed vestibulum sit
+        amet, consectetur nec nulla. Etiam nec egestas sapien, ac volutpat
+        mi.
+      </p>
+
+    </section>
+
+    <!-- Right side of intro -->
+    <section class="skills">
+  
+      <table>
+          <tr>
+            <th>Proficiency:</th>
+          </tr>
+          <tr>
+            <td>HTML:</td>
+            <td><progress value="80" max="100"></progress></td>
+          </tr>
+          <tr>
+            <td>CSS:</td>
+            <td><progress value="70" max="100"></progress></td>
+          </tr>
+          <tr>
+            <td>Javascript:</td>
+            <td><progress value="60" max="100"></progress></td>
+          </tr>
+      </table><!--Maybe consider using progress meters alongside. -->
+
+    </section>
+
+    <section class="work-history">
+
+      <h3>Work History:</h3>
+
+      <table>
+        
+        <tr class="work-info header">
+          <th>Yrs:</th>
+          <th>Company:</th>
+          <th>Title:</th>
+          <th>Tech Used:</th>
+        </tr>
+
+        <tr class="work-info">
+          <td>1</td>
+          <td>Google</td>
+          <td>Software Engineer</td>
+          <td>Python, SQL</td>
+        </tr>
+
+        <tr class="work-info">
+          <td>2</td>
+          <td>Microsoft</td>
+          <td>Back-End Developer</td>
+          <td>Javascript</td>
+        </tr>
+
+        <tr class="work-info">
+          <td>5</td>
+          <td>Amazon</td>
+          <td>Web Designer</td>
+          <td>HTML, CSS, Javascript</td>
+        </tr>
+
+        <tr class="work-info">
+          <td>2</td>
+          <td>Spotify</td>
+          <td>Developer</td>
+          <td>HTML, CSS</td>
+        </tr>
+
+      </table>
+
+    </section>
+
+  </main>
+
+  
+
 </body>
 </html>

@@ -53,7 +53,225 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+/*---------------.less variables-----------------*/
+
+@background-color: rgb(179, 179, 179);
+@font-style: 'Roboto', sans-serif;
+@link-color: black;
+@hover-color: rgb(173, 226, 148);
+@link-active: rgb(19, 107, 158);
+@link-padding: 0 2%;
+@border-padding: 2% 4%;
+@text-padding: 2% 0;
+@rounded-edges: 5%;
+@h1-text-size: 4.8rem;
+@h2-text-size: 3.6rem;
+@h3-text-size: 2.4rem;
+@content-padding: 5% 4% 2%;
+@phone: 500px;
+
+/*----------------------------------------------*/
+
+/*-------------------Mix-ins--------------------*/
+
+.nav-flex() {
+	display: flex;
+	justify-content: flex-end;
 }
 
+.flex-work() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*----------------------------------------------*/
+
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	background: @background-color;
+	font-family: @font-style;
+
+	h1 {
+		font-size: @h1-text-size;
+		padding: @text-padding;
+	}
+
+	h3 {
+		font-size: @h3-text-size;
+	}
+}
+
+.navigate {
+	.nav-flex();
+	padding: @border-padding;
+	background: whitesmoke;
+	border: 25px solid @background-color;
+
+	.links {
+		color: @link-color;
+		font-size: 2.0rem;
+		text-decoration: none;
+		&:hover {text-decoration: underline;
+		color: @hover-color;}
+		&:active {color: @link-active;}
+		padding: @link-padding;
+	}
+
+	@media (max-width: @phone) {
+
+	}
+}	
+
+.resume {
+	border: 50px solid whitesmoke;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	@media (max-width: @phone) {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+
+	.name-and-info {
+		padding: @content-padding;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+
+		.headshot {
+			width: 35%;
+    		height: 70%;
+			border-radius: @rounded-edges;
+			margin-right: 4%;
+
+			@media (max-width: @phone) {
+				width: 70%;
+				height: 35%;
+				margin-left: 15%;
+				   
+			}
+		}
+
+		.contact {
+			display: inline-block;
+			padding: 5% 4% 3% 13%;
+			font-size: 2.0rem;
+			margin-left: 4%;
+
+			@media (max-width: @phone) {
+				font-size: 1.4rem;
+			}
+
+			h3 {
+				font-weight: bold;
+				padding-bottom: 5%;
+			}
+
+			ul li {
+				padding-bottom: 2%;
+			}
+		}
+	}
+
+	.name-and-work {
+		display: block;
+		width: 100%;
+
+		@media (max-width: @phone) {
+			margin-left: 20%;
+		}
+
+		.web-dev {
+			margin: 2% 0;
+		}
+	}
+
+	.intro {
+		padding: 5% 4% 4%;
+		width: 45%;
+
+		@media(max-width: @phone) {
+			display: flex;
+			flex-flow: row wrap;
+			margin: 5% 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		h2 {
+			font-size: @h2-text-size;
+			padding: @text-padding;
+
+			@media(max-width: @phone) {
+				font-size: 2.5rem;
+				width: 45%;
+				margin-left: 2%;
+			}
+		}
+
+		p {
+			font-size: 1.6rem;
+
+			@media(max-width: @phone) {
+				font-size: 1.5rem;
+				width: 45%;
+			}
+		}
+	}
+
+	.skills {
+		padding: @content-padding;
+		width: 45%;
+
+		table {
+			width: 80%;
+			height: 90%;
+
+			th {
+				font-size: 2.4rem;
+				font-weight: bold;
+				width: 100%;
+			}
+
+			tr {
+				font-size: 2.4rem;
+			}
+		}	
+	}
+
+	.work-history {
+		padding: @content-padding;
+		width: 100%;
+		.flex-work();
+
+		h3 {
+			font-size: @h3-text-size;
+			font-weight: bold;
+			padding-bottom: 2%;
+		}
+
+		table {
+			border: 2px outset black;
+			width: 80%;
+			text-align: left;
+			background: linear-gradient(to bottom right, teal, white);
+
+			.header {
+				border-bottom: 2px solid black;
+			}
+
+			.work-info {
+				font-size: 1.6rem;
+
+				td {
+					padding: 2%;
+				}
+			}
+		}
+	}
+}
